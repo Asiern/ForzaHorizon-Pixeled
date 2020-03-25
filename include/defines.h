@@ -47,7 +47,7 @@ defines.h
 // Asignar un nombre a cada estado
 #define INICIO	0
 #define PUERTA_CERRADA 0
-#define PUERTA_CERRADA 1
+#define PUERTA_ABIERTA 1
 //...
 
 

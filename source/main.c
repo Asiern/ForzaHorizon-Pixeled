@@ -63,8 +63,19 @@ int main() {
 
 	while(1)
 	{
-		
-
+		if(estado == PUERTA_CERRADA){
+                if(TeclaPulsada() == SELECT){
+                    MostrarPuertaAbierta();
+					estado == PUERTA_ABIERTA;
+                }
+        }
+        else if(estado == PUERTA_ABIERTA){
+                    touchRead(&pos_pantalla);
+            		if(pos_pantalla.px!=0 && pos_pantalla.py!=0){
+                    MostrarPuerta();
+					estado == PUERTA_CERRADA;
+                }
+        }
 	}
 } 
 

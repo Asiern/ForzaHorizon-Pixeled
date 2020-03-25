@@ -37,6 +37,8 @@ int  TeclaPulsada() {
                         return R;
                 case 512:
                         return L;
+                default:
+                        return -1;
         }
 
 }
