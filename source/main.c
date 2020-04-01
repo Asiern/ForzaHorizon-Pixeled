@@ -55,27 +55,23 @@ int main() {
 	// en este caso time(NULL). 
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	srand (time(NULL));
+	interrupciones();
 
     
     
 // ...
-	estado = PUERTA_ABIERTA;
+	estado = ESPERA;
 
 	while(1)
 	{
-		if(estado == PUERTA_CERRADA){
-                if(TeclaPulsada() == SELECT){
-                    MostrarPuertaAbierta();
-					estado == PUERTA_ABIERTA;
-                }
-        }
-        else if(estado == PUERTA_ABIERTA){
-                    touchRead(&pos_pantalla);
-            		if(pos_pantalla.px!=0 && pos_pantalla.py!=0){
-                    MostrarPuerta();
-					estado == PUERTA_CERRADA;
-                }
-        }
+		if (estado == ESPERA){
+			iprintf("\x1b[10;5HTIMER: %d",TeclaPulsada());
+		}
+		if (estado == PUERTA_CERRADA){
+			if (TeclaPulsada() == A){
+				estado = PUERTA_ABIERTA;
+			}
+		}
 	}
 } 
 

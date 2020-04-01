@@ -45,14 +45,15 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define INICIO	0
-#define PUERTA_CERRADA 0
-#define PUERTA_ABIERTA 1
+#define PUERTA_CERRADA 1
+#define PUERTA_ABIERTA 2
+#define ESPERA 0
 //...
 
 
 // Variables globales
 
 extern int estado;
+extern int time;
 
 //...
