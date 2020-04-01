@@ -27,7 +27,7 @@ int estado;
 int main() {
 
 	// Variables del main
-	touchPosition pos_pantalla;
+	//touchPosition pos_pantalla;
 
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);
@@ -54,7 +54,7 @@ int main() {
  	// Para inicializar el generador de números aleatorios en función de una semilla,
 	// en este caso time(NULL). 
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
-	srand (time(NULL));
+	//srand (time(NULL));
 	interrupciones();
 
     

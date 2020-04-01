@@ -11,20 +11,20 @@ int seg = 0;
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
     if (estado == PUERTA_CERRADA){
-        time++;
-        if (time >= 100){
-            time = 0;
+        tik++;
+        if (tik >= 100){
+            tik = 0;
             seg++;
             iprintf("\x1b[10;5HTIMER: %d",seg);
         }
     }
 
     if (estado == PUERTA_ABIERTA){        
-        if (time < 300){
+        if (tik < 300){
             MostrarPuertaAbierta();
         }
         else{
-            time = 0;
+            tik = 0;
             estado = PUERTA_CERRADA;
         }
     }

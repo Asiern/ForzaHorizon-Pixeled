@@ -54,6 +54,6 @@ defines.h
 // Variables globales
 
 extern int estado;
-extern int time;
+extern int tik;
 
 //...
