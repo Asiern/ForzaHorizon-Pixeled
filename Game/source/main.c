@@ -59,18 +59,55 @@ int main() {
 
     
     
-// ...
-	estado = ESPERA;
+	void jugadores() {	
+		erakutsijokalariak(); //fondoa bistaratu
+		delay(50); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
+		touchRead(&PANT_DAT); // pantaila irakurri
+
+		//1 jokalari
+		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
+			jkop = 1;
+			jokoa01(1); // Zailtasun egoera			
+		}
+
+		//2 jokalari
+		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
+			jkop = 2;
+			jokoa01(1); // Zailtasun egoera			
+		}
+			
+		//3 jokalari
+		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
+			jkop = 3;
+			jokoa01(1); // Zailtasun egoera
+		}
+			
+		//4 jokalari
+		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
+			jkop = 4;
+			jokoa01(1); // Zailtasun egoera
+		}
+	
+	}	
+	estado = INICIO;
 
 	while(1)
 	{
-		if (estado == ESPERA){
-			iprintf("\x1b[10;5HTIMER: %d",TeclaPulsada());
-		}
-		if (estado == PUERTA_CERRADA){
-			if (TeclaPulsada() == A){
-				estado = PUERTA_ABIERTA;
-			}
+		switch (estado)
+		{
+		case INICIO:
+			iprintf("\x1b[20;2H   Seleccionar jugadores   ");		
+			//void
+			break;
+		case CONFIG:
+
+			break;
+		case JUEGO:
+			break;
+		case PAUSA:
+			break;	
+		default:
+			break;
 		}
 	}
 } 
