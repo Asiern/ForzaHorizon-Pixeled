@@ -45,9 +45,10 @@ defines.h
 #define L		9
 
 // Asignar un nombre a cada estado
-#define PUERTA_CERRADA 1
-#define PUERTA_ABIERTA 2
-#define ESPERA 0
+#define INICIO 0
+#define CONFIG 1
+#define JUEGO 2
+#define PAUSA 3
 //...
 
 
