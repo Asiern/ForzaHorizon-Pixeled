@@ -1,1 +1,0 @@
-PuertaAbierta.o: PuertaAbierta.s
