@@ -60,9 +60,9 @@ int main() {
     
     
 	void jugadores() {	
-		erakutsijokalariak(); //fondoa bistaratu
-		delay(50); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
-		touchRead(&PANT_DAT); // pantaila irakurri
+		erakutsijokalariak(); 
+		delay(50); 
+		touchRead(&PANT_DAT); 
 
 		//1 jokalari
 		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
