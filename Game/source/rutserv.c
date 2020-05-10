@@ -1,7 +1,4 @@
-﻿/*-------------------------------------
- rutserv.c
--------------------------------------*/
-// Añadir los includes que sean necesarios
+﻿// Añadir los includes que sean necesarios
 #include <nds.h>
 #include <stdio.h>
 #include "teclado.h"
