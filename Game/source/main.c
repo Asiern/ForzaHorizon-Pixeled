@@ -27,7 +27,7 @@ int estado;
 int main() {
 
 	// Variables del main
-	//touchPosition pos_pantalla;
+	touchPosition pos_pantalla;
 
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);
@@ -37,9 +37,6 @@ int main() {
     	lcdMainOnBottom();
     	initVideo();
     	initFondos();
-
-    	// Mostrar fondos en pantalla. 
-    	MostrarPuerta();
 
 	// Inicializar memoria de sprites y guardar en ella los sprites 
 	initSpriteMem();
@@ -56,39 +53,10 @@ int main() {
 	// srand() sólo se suele activar una vez por ejecución y no devuelve ningún valor 
 	//srand (time(NULL));
 	interrupciones();
+  
 
-    
-    
-	void jugadores() {	
-		erakutsijokalariak(); 
-		delay(50); 
-		touchRead(&PANT_DAT); 
-
-		//1 jokalari
-		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
-			jkop = 1;
-			jokoa01(1); // Zailtasun egoera			
-		}
-
-		//2 jokalari
-		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
-			jkop = 2;
-			jokoa01(1); // Zailtasun egoera			
-		}
-			
-		//3 jokalari
-		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
-			jkop = 3;
-			jokoa01(1); // Zailtasun egoera
-		}
-			
-		//4 jokalari
-		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
-			jkop = 4;
-			jokoa01(1); // Zailtasun egoera
-		}
 	
-	}	
+
 	estado = INICIO;
 
 	while(1)
@@ -96,11 +64,11 @@ int main() {
 		switch (estado)
 		{
 		case INICIO:
-			iprintf("\x1b[20;2H   Seleccionar jugadores   ");		
-			//void
+			iprintf("\x1b[20;2H   Seleccionar jugadores   ");	
+			MostrarJugadores();
 			break;
 		case CONFIG:
-
+			MostrarPuerta();
 			break;
 		case JUEGO:
 			break;

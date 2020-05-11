@@ -46,14 +46,7 @@ int  TeclaPulsada() {
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-	if (TeclaPulsada() == START){
-                tik= 0;
-                estado = PUERTA_CERRADA;
-        }
-        if(TeclaPulsada() == A){
-                tik = 0;
-                estado = PUERTA_ABIERTA;
-        }
+	
 }
 
 
