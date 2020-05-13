@@ -67,25 +67,25 @@ int main() {
 		delay(50);
 		//touchRead(&PANT_DAT);
 
-		//1 jokalari
+		//1 jugador
 		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
 			jugadores = 1;
 			estado = CONFIG;		
 		}
 
-		//2 jokalari
+		//2 jugadores
 		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
 			jugadores = 2;
 			estado = CONFIG;	
 		}
 			
-		//3 jokalari
+		//3 jugadores
 		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
 			jugadores = 3;
 			estado = CONFIG;
 		}
 			
-		//4 jokalari
+		//4 jugadores
 		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
 			jugadores = 4;
 			estado = CONFIG;
@@ -95,30 +95,30 @@ int main() {
 
 	void Config() {
 		delay(800); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
-		//fondoa bistaratu
-		PANT_DAT.px = 0; //x eta y balioak hasieratu
+		//Mostrar fondo
+		PANT_DAT.px = 0; //Inicia;izar x e y
 		PANT_DAT.py = 0;
 
 		//iprintf("\x1b[23;5HAukeratu zailtasuna"); //Fix Height
 		
 		while (PANT_DAT.px == 0 && PANT_DAT.py == 0){
-			touchRead(&PANT_DAT); //pantaila irakurri
+			touchRead(&PANT_DAT); //Leer panalla
 		}
 			
 			
-		//Erraza
+		//Facil
 		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 90 && PANT_DAT.py <= 111)){
 			dificultad = 1;	
 			estado = JUEGO;					
 		}
 
-		//Normala
+		//Normal
 		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 124 && PANT_DAT.py <= 145)){
 			dificultad = 2;
 			estado = JUEGO;	
 		}
 			
-		//Zaila
+		//Dificil
 		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 158 && PANT_DAT.py <= 179)){
 			dificultad = 3;
 			estado = JUEGO;
