@@ -27,7 +27,9 @@ int estado;
 int main() {
 
 	// Variables del main
-	touchPosition pos_pantalla;
+	//touchPosition pos_pantalla;
+	int jugadores;
+	int dificultad;
 
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);
@@ -55,23 +57,112 @@ int main() {
 	interrupciones();
   
 
-	
-
 	estado = INICIO;
+	
+	
+	
+	void Inicio () {	
+
+		//erakutsijokalariak();
+		delay(50);
+		//touchRead(&PANT_DAT);
+
+		//1 jokalari
+		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
+			jugadores = 1;
+			estado = CONFIG;		
+		}
+
+		//2 jokalari
+		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
+			jugadores = 2;
+			estado = CONFIG;	
+		}
+			
+		//3 jokalari
+		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
+			jugadores = 3;
+			estado = CONFIG;
+		}
+			
+		//4 jokalari
+		if((PANT_DAT.px >= 143 && PANT_DAT.px <= 235) && (PANT_DAT.py >= 150 && PANT_DAT.py <= 190)){
+			jugadores = 4;
+			estado = CONFIG;
+		}
+	
+	}
+
+	void Config() {
+		delay(800); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
+		//fondoa bistaratu
+		PANT_DAT.px = 0; //x eta y balioak hasieratu
+		PANT_DAT.py = 0;
+
+		//iprintf("\x1b[23;5HAukeratu zailtasuna"); //Fix Height
+		
+		while (PANT_DAT.px == 0 && PANT_DAT.py == 0){
+			touchRead(&PANT_DAT); //pantaila irakurri
+		}
+			
+			
+		//Erraza
+		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 90 && PANT_DAT.py <= 111)){
+			dificultad = 1;	
+			estado = JUEGO;					
+		}
+
+		//Normala
+		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 124 && PANT_DAT.py <= 145)){
+			dificultad = 2;
+			estado = JUEGO;	
+		}
+			
+		//Zaila
+		if((PANT_DAT.px >= 47 && PANT_DAT.px <= 209) && (PANT_DAT.py >= 158 && PANT_DAT.py <= 179)){
+			dificultad = 3;
+			estado = JUEGO;
+			
+		}
+	}
+
+
+	void delay (int x){ //delay = x ms
+			int time = 0;
+
+			while (x > time){
+				x--;				
+				iprintf("\x1b[2;3H##########################");
+			}
+	}
+
 
 	while(1)
 	{
 		switch (estado)
 		{
 		case INICIO:
-			iprintf("\x1b[20;2H   Seleccionar jugadores   ");	
-			MostrarJugadores();
+			iprintf("\x1b[20;2H   Seleccionar jugadores   ");
+			Inicio();
 			break;
+
 		case CONFIG:
-			MostrarPuerta();
+			iprintf("\x1b[20;2H  Seleccionar Dificultad   ");	
+			Config();
 			break;
+
 		case JUEGO:
+			iprintf("\x1b[20;2H                                ");
+			if (jugadores == 1)
+				jokoa1players();
+			if (jugadore == 2)
+				jokoa2players();
+			if (jugadore == 3)
+				jokoa3players();
+			if (jugadore == 4)
+				jokoa4players();
 			break;
+
 		case PAUSA:
 			break;	
 		default:
