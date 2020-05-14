@@ -101,9 +101,9 @@ int main() {
 	}
 
 	void Config() {
-		delay(800); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
+		delay(800); //delay para no detectar dos toques en la pantalla tactil
 		MostrarJuego();
-		PANT_DAT.px = 0; //Inicia;izar x e y
+		PANT_DAT.px = 0; //Inicializar x e y
 		PANT_DAT.py = 0;
 
 		//iprintf("\x1b[23;5HAukeratu zailtasuna"); //Fix Height
