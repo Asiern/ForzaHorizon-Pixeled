@@ -15,6 +15,7 @@ dovoto y otro de Jaeden Amero
 #include "Puerta.h"
 #include "PuertaAbierta.h"
 #include "Jugadores.h"
+#include "Juego.h"
 
 /* Seleccionar un canal DMA para copiar a memoria las imágenes */
 static const int DMA_CHANNEL = 3;
@@ -98,5 +99,11 @@ void MostrarJugadores() {
                      JugadoresBitmap, /* Variable generada automáticamente */
                      (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
                      JugadoresBitmapLen); /* Longitud (en bytes) generada automáticamente */
+}
+void MostrarJuego() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     JuegoBitmap, /* Variable generada automáticamente */
+                     (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
+                     JuegoBitmapLen); /* Longitud (en bytes) generada automáticamente */
 }
 
