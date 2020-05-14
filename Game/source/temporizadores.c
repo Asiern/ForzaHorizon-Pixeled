@@ -11,7 +11,7 @@ int dificultad;
 int jugadores;
 int timereset;
 
-int tik=0;
+int tik = 0;
 static int seg=0;
 int x = 5;
 int x1 = 5;
@@ -21,8 +21,8 @@ int x4 = 5;
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
-	iprintf("\x1b[20;2H %d", tik);
     //static int tik=0;
+	iprintf("\x1b[20;2H %d", tik);
 	/* Void honetan erlojuaren bitartez beste jokalariak kontrolatzen dira*/
 	static int seg = 0;
 	static int dec = 0;
@@ -32,6 +32,7 @@ void IntTemp() {
 	static int speed3 = 30; //Zailtasun zailaren abiadura
 	
 	if (timereset == 0){ //Timer-a hasieratu
+		iprintf("\x1b[10;2H qwqehniwudhqwwd");
 		BorrarCar(1,0,0);
 		BorrarCar(2,0,0);
 		BorrarCar(3,0,0);
@@ -46,6 +47,7 @@ void IntTemp() {
 	}
 	else{
 		tik++; 
+		iprintf("\x1b[8;2H oijoijoijoijoij");
 		if (tik==1)
 		{
 			dec++;

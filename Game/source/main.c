@@ -21,7 +21,7 @@ dovoto y otro de Jaeden Amero
 //-----------------------------------------------------
 
 int estado;
-
+int timereset;
 
 
 int main() {
@@ -69,7 +69,7 @@ int main() {
 	
 	
 	void Inicio () {	
-
+		timereset = 1;
 		MostrarJugadores();
 		delay(50);
 		touchRead(&PANT_DAT);
@@ -133,10 +133,10 @@ int main() {
 		}
 	}
 
-	/*void juego1players () { //jokalari batentzako void-a
+	void juego1players () { //jokalari batentzako void-a
 		int pushA = 1;
 		/* Pushak (A, B, GORA, BEHERA) tekla sakatuta mantenduz ez mugitzeko erabiltzan dira jokoaren 4 voidetan 
-		(jokoa1players,jokoa2players,jokoa3players,jokoa4players)
+		(jokoa1players,jokoa2players,jokoa3players,jokoa4players)*/
 	
 		//J1
 		int j1 = 0; //finished(1) or not(0)
@@ -180,7 +180,7 @@ int main() {
 		timereset = 0;
 		estado = INICIO;
 	
-	}*/
+	}
 
 
 	
@@ -205,14 +205,15 @@ int main() {
 			if (jugadores == 1)
 				juego1players();
 			if (jugadores == 2)
-				juego2players();
+				//juego2players();
 			if (jugadores == 3)
-				juego3players();
+				//juego3players();
 			if (jugadores == 4)
-				juego4players();
+				//juego4players();
 			break;
 
 		case PAUSA:
+			iprintf("\x1b[15;2H PAUSA   ");
 			break;	
 		default:
 			break;

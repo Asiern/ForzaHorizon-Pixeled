@@ -1,9 +1,9 @@
 
-//{{BLOCK(Juego)
+//{{BLOCK(Pausa)
 
 //======================================================================
 //
-//	Juego, 256x192@16, 
+//	Pausa, 256x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 98304 = 98304
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_JUEGO_H
-#define GRIT_JUEGO_H
+#ifndef GRIT_PAUSA_H
+#define GRIT_PAUSA_H
 
-#define JuegoBitmapLen 98304
-extern const unsigned int JuegoBitmap[24576];
+#define PausaBitmapLen 98304
+extern const unsigned int PausaBitmap[24576];
 
-#endif // GRIT_JUEGO_H
+#endif // GRIT_PAUSA_H
 
-//}}BLOCK(Juego)
+//}}BLOCK(Pausa)

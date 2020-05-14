@@ -59,15 +59,15 @@ void IntTec() {
                 BorrarCar(2,0,0);
                 BorrarCar(3,0,0);
                 BorrarCar(4,0,0);
-                //erakutsipause();
+                MostrarPausa();
                 while (stop == 0){
                         if(TeclaPulsada() == A){
-                                // FONDO erakutsijokoa();				
+                                MostrarJuego();				
                                 stop = 1;
                         }	
                         if(TeclaPulsada() == B){
                                 timereset = 0;
-                                estado = JUEGO;			
+                                estado = PAUSA;			
                                 stop = 1;
                         }
                 }

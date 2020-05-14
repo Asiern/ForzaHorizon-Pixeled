@@ -52,7 +52,8 @@ fondos.o: /home/user/Desktop/Game/source/fondos.c \
   /home/user/Desktop/Game/build/PuertaAbierta.h \
   /home/user/Desktop/Game/build/Jugadores.h \
   /home/user/Desktop/Game/build/Juego.h \
-  /home/user/Desktop/Game/build/Dificultad.h
+  /home/user/Desktop/Game/build/Dificultad.h \
+  /home/user/Desktop/Game/build/Pausa.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -161,3 +162,5 @@ fondos.o: /home/user/Desktop/Game/source/fondos.c \
 /home/user/Desktop/Game/build/Juego.h:
 
 /home/user/Desktop/Game/build/Dificultad.h:
+
+/home/user/Desktop/Game/build/Pausa.h:

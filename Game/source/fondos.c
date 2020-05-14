@@ -17,6 +17,7 @@ dovoto y otro de Jaeden Amero
 #include "Jugadores.h"
 #include "Juego.h"
 #include "Dificultad.h"
+#include "Pausa.h"
 
 /* Seleccionar un canal DMA para copiar a memoria las imágenes */
 static const int DMA_CHANNEL = 3;
@@ -112,5 +113,11 @@ void MostrarDificultad() {
                      DificultadBitmap, /* Variable generada automáticamente */
                      (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
                      DificultadBitmapLen); /* Longitud (en bytes) generada automáticamente */
+}
+void MostrarPausa() {
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     PausaBitmap, /* Variable generada automáticamente */
+                     (uint16 *)BG_BMP_RAM(0), /* Dirección del fondo 3 principal */
+                     PausaBitmapLen); /* Longitud (en bytes) generada automáticamente */
 }
 
