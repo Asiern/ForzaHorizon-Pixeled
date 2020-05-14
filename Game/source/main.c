@@ -59,13 +59,21 @@ int main() {
 
 	estado = INICIO;
 	
+	void delay(int x){ //delay = x ms
+			int time = 0;
+
+			while (x > time){
+				x--;				
+				iprintf("\x1b[2;3H##########################");
+			}
+	}
 	
 	
 	void Inicio () {	
 
-		//erakutsijokalariak();
+		MostrarJugadores();
 		delay(50);
-		//touchRead(&PANT_DAT);
+		touchRead(&PANT_DAT);
 
 		//1 jugador
 		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
@@ -95,7 +103,7 @@ int main() {
 
 	void Config() {
 		delay(800); //delay bat ukimen pantaila erabiltzerakoan bi ukimen ez irakurtzeko
-		//Mostrar fondo
+		MostrarJuego();
 		PANT_DAT.px = 0; //Inicia;izar x e y
 		PANT_DAT.py = 0;
 
@@ -127,14 +135,7 @@ int main() {
 	}
 
 
-	void delay (int x){ //delay = x ms
-			int time = 0;
-
-			while (x > time){
-				x--;				
-				iprintf("\x1b[2;3H##########################");
-			}
-	}
+	
 
 
 	while(1)
@@ -152,15 +153,7 @@ int main() {
 			break;
 
 		case JUEGO:
-			iprintf("\x1b[20;2H                                ");
-			if (jugadores == 1)
-				jokoa1players();
-			if (jugadore == 2)
-				jokoa2players();
-			if (jugadore == 3)
-				jokoa3players();
-			if (jugadore == 4)
-				jokoa4players();
+			
 			break;
 
 		case PAUSA:
