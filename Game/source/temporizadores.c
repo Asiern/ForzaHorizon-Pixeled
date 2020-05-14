@@ -7,11 +7,11 @@
 #include <nds.h>
 #include <stdio.h>
 
-int digicultad;
+int dificultad;
 int jugadores;
 int timereset;
 
-static int tik=0;
+int tik=0;
 static int seg=0;
 int x = 5;
 int x1 = 5;

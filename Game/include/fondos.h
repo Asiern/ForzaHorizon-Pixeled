@@ -5,6 +5,8 @@ extern void initFondos();
 
 extern void MostrarPuerta();
 extern void MostrarPuertaAbierta ();
+extern void MostrarJuego();
+void MostrarDificultad();
 
 
 /* Definir el sistema de vídeo */

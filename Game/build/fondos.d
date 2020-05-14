@@ -1,188 +1,163 @@
-fondos.o: \
- /home/edurne/ownCloud/IRAKASKUNTZA/KE_19-20/ES/Proyecto/Plantilla_proyecto/source/fondos.c \
- /opt/devkitpro/libnds/include/nds.h \
- /opt/devkitpro/libnds/include/nds/libversion.h \
- /opt/devkitpro/libnds/include/nds/ndstypes.h \
- /opt/devkitpro/libnds/include/nds/bios.h \
- /opt/devkitpro/libnds/include/nds/ndstypes.h \
- /opt/devkitpro/libnds/include/nds/card.h \
- /opt/devkitpro/libnds/include/nds/ndstypes.h \
- /opt/devkitpro/libnds/include/nds/debug.h \
- /opt/devkitpro/libnds/include/nds/dma.h \
- /opt/devkitpro/libnds/include/nds/interrupts.h \
- /opt/devkitpro/libnds/include/nds/ipc.h \
- /opt/devkitpro/libnds/include/nds/memory.h \
- /opt/devkitpro/libnds/include/nds/system.h \
- /opt/devkitpro/libnds/include/nds/timers.h \
- /opt/devkitpro/libnds/include/nds/fifocommon.h \
- /opt/devkitpro/libnds/include/nds/interrupts.h \
- /opt/devkitpro/libnds/include/nds/touch.h \
- /opt/devkitpro/libnds/include/nds/input.h \
- /opt/devkitpro/libnds/include/nds/sha1.h \
- /opt/devkitpro/libnds/include/nds/arm9/dynamicArray.h \
- /opt/devkitpro/libnds/include/nds/arm9/linkedlist.h \
- /opt/devkitpro/libnds/include/nds/arm9/background.h \
- /opt/devkitpro/libnds/include/nds/arm9/video.h \
- /opt/devkitpro/libnds/include/nds/arm9/sassert.h \
- /opt/devkitpro/libnds/include/nds/memory.h \
- /opt/devkitpro/libnds/include/nds/dma.h \
- /opt/devkitpro/libnds/include/nds/arm9/boxtest.h \
- /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
- /opt/devkitpro/libnds/include/nds/arm9/cache.h \
- /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h \
- /opt/devkitpro/libnds/include/nds/arm9/math.h \
- /opt/devkitpro/libnds/include/nds/arm9/dynamicArray.h \
- /opt/devkitpro/libnds/include/nds/arm9/cache.h \
- /opt/devkitpro/libnds/include/nds/arm9/console.h \
- /opt/devkitpro/libnds/include/nds/arm9/background.h \
- /opt/devkitpro/libnds/include/nds/arm9/decompress.h \
- /opt/devkitpro/libnds/include/nds/bios.h \
- /opt/devkitpro/libnds/include/nds/arm9/exceptions.h \
- /opt/devkitpro/libnds/include/nds/arm9/guitarGrip.h \
- /opt/devkitpro/libnds/include/nds/arm9/image.h \
- /opt/devkitpro/libnds/include/nds/arm9/pcx.h \
- /opt/devkitpro/libnds/include/nds/arm9/input.h \
- /opt/devkitpro/libnds/include/nds/touch.h \
- /opt/devkitpro/libnds/include/nds/input.h \
- /opt/devkitpro/libnds/include/nds/arm9/keyboard.h \
- /opt/devkitpro/libnds/include/nds/arm9/math.h \
- /opt/devkitpro/libnds/include/nds/arm9/paddle.h \
- /opt/devkitpro/libnds/include/nds/arm9/pcx.h \
- /opt/devkitpro/libnds/include/nds/arm9/piano.h \
- /opt/devkitpro/libnds/include/nds/arm9/rumble.h \
- /opt/devkitpro/libnds/include/nds/arm9/sassert.h \
- /opt/devkitpro/libnds/include/nds/arm9/sound.h \
- /opt/devkitpro/libnds/include/nds/arm9/sprite.h \
- /opt/devkitpro/libnds/include/nds/system.h \
- /opt/devkitpro/libnds/include/nds/arm9/window.h \
- /opt/devkitpro/libnds/include/nds/arm9/sprite.h \
- /opt/devkitpro/libnds/include/nds/arm9/trig_lut.h \
- /opt/devkitpro/libnds/include/nds/arm9/video.h \
- /opt/devkitpro/libnds/include/nds/arm9/videoGL.h \
- /opt/devkitpro/libnds/include/nds/arm9/nand.h \
- /home/edurne/ownCloud/IRAKASKUNTZA/KE_19-20/ES/Proyecto/Plantilla_proyecto/include/fondos.h \
- /home/edurne/ownCloud/IRAKASKUNTZA/KE_19-20/ES/Proyecto/Plantilla_proyecto/build/Puerta.h
+fondos.o: /home/user/Desktop/Game/source/fondos.c \
+  /opt/devkitPro/libnds/include/nds.h \
+  /opt/devkitPro/libnds/include/nds/libversion.h \
+  /opt/devkitPro/libnds/include/nds/ndstypes.h \
+  /opt/devkitPro/libnds/include/nds/bios.h \
+  /opt/devkitPro/libnds/include/nds/ndstypes.h \
+  /opt/devkitPro/libnds/include/nds/card.h \
+  /opt/devkitPro/libnds/include/nds/ndstypes.h \
+  /opt/devkitPro/libnds/include/nds/debug.h \
+  /opt/devkitPro/libnds/include/nds/dma.h \
+  /opt/devkitPro/libnds/include/nds/interrupts.h \
+  /opt/devkitPro/libnds/include/nds/ipc.h \
+  /opt/devkitPro/libnds/include/nds/memory.h \
+  /opt/devkitPro/libnds/include/nds/system.h \
+  /opt/devkitPro/libnds/include/nds/fifocommon.h \
+  /opt/devkitPro/libnds/include/nds/timers.h \
+  /opt/devkitPro/libnds/include/nds/linkedlist.h \
+  /opt/devkitPro/libnds/include/nds/fifocommon.h \
+  /opt/devkitPro/libnds/include/nds/touch.h \
+  /opt/devkitPro/libnds/include/nds/arm9/background.h \
+  /opt/devkitPro/libnds/include/nds/arm9/video.h \
+  /opt/devkitPro/libnds/include/nds/arm9/sassert.h \
+  /opt/devkitPro/libnds/include/nds/memory.h \
+  /opt/devkitPro/libnds/include/nds/dma.h \
+  /opt/devkitPro/libnds/include/nds/arm9/boxtest.h \
+  /opt/devkitPro/libnds/include/nds/arm9/videoGL.h \
+  /opt/devkitPro/libnds/include/nds/arm9/cache.h \
+  /opt/devkitPro/libnds/include/nds/arm9/trig_lut.h \
+  /opt/devkitPro/libnds/include/nds/arm9/math.h \
+  /opt/devkitPro/libnds/include/nds/dynamicArray.h \
+  /opt/devkitPro/libnds/include/nds/arm9/cache.h \
+  /opt/devkitPro/libnds/include/nds/arm9/console.h \
+  /opt/devkitPro/libnds/include/nds/arm9/background.h \
+  /opt/devkitPro/libnds/include/nds/arm9/keyboard.h \
+  /opt/devkitPro/libnds/include/nds/arm9/exceptions.h \
+  /opt/devkitPro/libnds/include/nds/arm9/image.h \
+  /opt/devkitPro/libnds/include/nds/arm9/pcx.h \
+  /opt/devkitPro/libnds/include/nds/arm9/input.h \
+  /opt/devkitPro/libnds/include/nds/touch.h \
+  /opt/devkitPro/libnds/include/nds/arm9/math.h \
+  /opt/devkitPro/libnds/include/nds/arm9/pcx.h \
+  /opt/devkitPro/libnds/include/nds/arm9/rumble.h \
+  /opt/devkitPro/libnds/include/nds/arm9/sound.h \
+  /opt/devkitPro/libnds/include/nds/arm9/trig_lut.h \
+  /opt/devkitPro/libnds/include/nds/arm9/video.h \
+  /opt/devkitPro/libnds/include/nds/arm9/videoGL.h \
+  /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
+  /opt/devkitPro/libnds/include/nds/system.h \
+  /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
+  /home/user/Desktop/Game/include/fondos.h \
+  /home/user/Desktop/Game/build/Puerta.h \
+  /home/user/Desktop/Game/build/PuertaAbierta.h \
+  /home/user/Desktop/Game/build/Jugadores.h \
+  /home/user/Desktop/Game/build/Juego.h \
+  /home/user/Desktop/Game/build/Dificultad.h
 
-/opt/devkitpro/libnds/include/nds.h:
+/opt/devkitPro/libnds/include/nds.h:
 
-/opt/devkitpro/libnds/include/nds/libversion.h:
+/opt/devkitPro/libnds/include/nds/libversion.h:
 
-/opt/devkitpro/libnds/include/nds/ndstypes.h:
+/opt/devkitPro/libnds/include/nds/ndstypes.h:
 
-/opt/devkitpro/libnds/include/nds/bios.h:
+/opt/devkitPro/libnds/include/nds/bios.h:
 
-/opt/devkitpro/libnds/include/nds/ndstypes.h:
+/opt/devkitPro/libnds/include/nds/ndstypes.h:
 
-/opt/devkitpro/libnds/include/nds/card.h:
+/opt/devkitPro/libnds/include/nds/card.h:
 
-/opt/devkitpro/libnds/include/nds/ndstypes.h:
+/opt/devkitPro/libnds/include/nds/ndstypes.h:
 
-/opt/devkitpro/libnds/include/nds/debug.h:
+/opt/devkitPro/libnds/include/nds/debug.h:
 
-/opt/devkitpro/libnds/include/nds/dma.h:
+/opt/devkitPro/libnds/include/nds/dma.h:
 
-/opt/devkitpro/libnds/include/nds/interrupts.h:
+/opt/devkitPro/libnds/include/nds/interrupts.h:
 
-/opt/devkitpro/libnds/include/nds/ipc.h:
+/opt/devkitPro/libnds/include/nds/ipc.h:
 
-/opt/devkitpro/libnds/include/nds/memory.h:
+/opt/devkitPro/libnds/include/nds/memory.h:
 
-/opt/devkitpro/libnds/include/nds/system.h:
+/opt/devkitPro/libnds/include/nds/system.h:
 
-/opt/devkitpro/libnds/include/nds/timers.h:
+/opt/devkitPro/libnds/include/nds/fifocommon.h:
 
-/opt/devkitpro/libnds/include/nds/fifocommon.h:
+/opt/devkitPro/libnds/include/nds/timers.h:
 
-/opt/devkitpro/libnds/include/nds/interrupts.h:
+/opt/devkitPro/libnds/include/nds/linkedlist.h:
 
-/opt/devkitpro/libnds/include/nds/touch.h:
+/opt/devkitPro/libnds/include/nds/fifocommon.h:
 
-/opt/devkitpro/libnds/include/nds/input.h:
+/opt/devkitPro/libnds/include/nds/touch.h:
 
-/opt/devkitpro/libnds/include/nds/sha1.h:
+/opt/devkitPro/libnds/include/nds/arm9/background.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/dynamicArray.h:
+/opt/devkitPro/libnds/include/nds/arm9/video.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/linkedlist.h:
+/opt/devkitPro/libnds/include/nds/arm9/sassert.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/background.h:
+/opt/devkitPro/libnds/include/nds/memory.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/video.h:
+/opt/devkitPro/libnds/include/nds/dma.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/sassert.h:
+/opt/devkitPro/libnds/include/nds/arm9/boxtest.h:
 
-/opt/devkitpro/libnds/include/nds/memory.h:
+/opt/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-/opt/devkitpro/libnds/include/nds/dma.h:
+/opt/devkitPro/libnds/include/nds/arm9/cache.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/boxtest.h:
+/opt/devkitPro/libnds/include/nds/arm9/trig_lut.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/videoGL.h:
+/opt/devkitPro/libnds/include/nds/arm9/math.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/cache.h:
+/opt/devkitPro/libnds/include/nds/dynamicArray.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/trig_lut.h:
+/opt/devkitPro/libnds/include/nds/arm9/cache.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/math.h:
+/opt/devkitPro/libnds/include/nds/arm9/console.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/dynamicArray.h:
+/opt/devkitPro/libnds/include/nds/arm9/background.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/cache.h:
+/opt/devkitPro/libnds/include/nds/arm9/keyboard.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/console.h:
+/opt/devkitPro/libnds/include/nds/arm9/exceptions.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/background.h:
+/opt/devkitPro/libnds/include/nds/arm9/image.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/decompress.h:
+/opt/devkitPro/libnds/include/nds/arm9/pcx.h:
 
-/opt/devkitpro/libnds/include/nds/bios.h:
+/opt/devkitPro/libnds/include/nds/arm9/input.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/exceptions.h:
+/opt/devkitPro/libnds/include/nds/touch.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/guitarGrip.h:
+/opt/devkitPro/libnds/include/nds/arm9/math.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/image.h:
+/opt/devkitPro/libnds/include/nds/arm9/pcx.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/pcx.h:
+/opt/devkitPro/libnds/include/nds/arm9/rumble.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/input.h:
+/opt/devkitPro/libnds/include/nds/arm9/sound.h:
 
-/opt/devkitpro/libnds/include/nds/touch.h:
+/opt/devkitPro/libnds/include/nds/arm9/trig_lut.h:
 
-/opt/devkitpro/libnds/include/nds/input.h:
+/opt/devkitPro/libnds/include/nds/arm9/video.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/keyboard.h:
+/opt/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/math.h:
+/opt/devkitPro/libnds/include/nds/arm9/sprite.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/paddle.h:
+/opt/devkitPro/libnds/include/nds/system.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/pcx.h:
+/opt/devkitPro/libnds/include/nds/arm9/decompress.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/piano.h:
+/home/user/Desktop/Game/include/fondos.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/rumble.h:
+/home/user/Desktop/Game/build/Puerta.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/sassert.h:
+/home/user/Desktop/Game/build/PuertaAbierta.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/sound.h:
+/home/user/Desktop/Game/build/Jugadores.h:
 
-/opt/devkitpro/libnds/include/nds/arm9/sprite.h:
+/home/user/Desktop/Game/build/Juego.h:
 
-/opt/devkitpro/libnds/include/nds/system.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/window.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/sprite.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/trig_lut.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/video.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/videoGL.h:
-
-/opt/devkitpro/libnds/include/nds/arm9/nand.h:
-
-/home/edurne/ownCloud/IRAKASKUNTZA/KE_19-20/ES/Proyecto/Plantilla_proyecto/include/fondos.h:
-
-/home/edurne/ownCloud/IRAKASKUNTZA/KE_19-20/ES/Proyecto/Plantilla_proyecto/build/Puerta.h:
+/home/user/Desktop/Game/build/Dificultad.h:

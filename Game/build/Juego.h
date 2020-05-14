@@ -1,9 +1,9 @@
 
-//{{BLOCK(Puerta)
+//{{BLOCK(Juego)
 
 //======================================================================
 //
-//	Puerta, 256x192@16, 
+//	Juego, 256x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 98304 = 98304
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_PUERTA_H
-#define GRIT_PUERTA_H
+#ifndef GRIT_JUEGO_H
+#define GRIT_JUEGO_H
 
-#define PuertaBitmapLen 98304
-extern const unsigned int PuertaBitmap[24576];
+#define JuegoBitmapLen 98304
+extern const unsigned int JuegoBitmap[24576];
 
-#endif // GRIT_PUERTA_H
+#endif // GRIT_JUEGO_H
 
-//}}BLOCK(Puerta)
+//}}BLOCK(Juego)

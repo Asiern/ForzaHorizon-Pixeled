@@ -1,9 +1,9 @@
 
-//{{BLOCK(Puerta)
+//{{BLOCK(Dificultad)
 
 //======================================================================
 //
-//	Puerta, 256x192@16, 
+//	Dificultad, 256x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 98304 = 98304
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_PUERTA_H
-#define GRIT_PUERTA_H
+#ifndef GRIT_DIFICULTAD_H
+#define GRIT_DIFICULTAD_H
 
-#define PuertaBitmapLen 98304
-extern const unsigned int PuertaBitmap[24576];
+#define DificultadBitmapLen 98304
+extern const unsigned int DificultadBitmap[24576];
 
-#endif // GRIT_PUERTA_H
+#endif // GRIT_DIFICULTAD_H
 
-//}}BLOCK(Puerta)
+//}}BLOCK(Dificultad)

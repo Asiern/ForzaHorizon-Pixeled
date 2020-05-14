@@ -26,6 +26,9 @@ extern void BorrarRombo(int indice, int x, int y);
 extern void MostrarRomboGrande(int x, int y);
 extern void BorrarRomboGrande(int x, int y);
 
+extern void MostrarCar(int indice, int x, int y);
+extern void BorrarCar(int indice, int x, int y);
+
 
 
 

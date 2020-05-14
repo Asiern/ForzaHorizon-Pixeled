@@ -53,7 +53,7 @@ void IntTec() {
                 BorrarCar(2,0,0);
                 BorrarCar(3,0,0);
                 BorrarCar(4,0,0);
-                erakutsipause();
+                //erakutsipause();
                 while (stop == 0){
                         if(TeclaPulsada() == A){
                                 // FONDO erakutsijokoa();				

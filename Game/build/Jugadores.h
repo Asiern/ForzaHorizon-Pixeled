@@ -1,9 +1,9 @@
 
-//{{BLOCK(Puerta)
+//{{BLOCK(Jugadores)
 
 //======================================================================
 //
-//	Puerta, 256x192@16, 
+//	Jugadores, 256x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 98304 = 98304
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_PUERTA_H
-#define GRIT_PUERTA_H
+#ifndef GRIT_JUGADORES_H
+#define GRIT_JUGADORES_H
 
-#define PuertaBitmapLen 98304
-extern const unsigned int PuertaBitmap[24576];
+#define JugadoresBitmapLen 98304
+extern const unsigned int JugadoresBitmap[24576];
 
-#endif // GRIT_PUERTA_H
+#endif // GRIT_JUGADORES_H
 
-//}}BLOCK(Puerta)
+//}}BLOCK(Jugadores)

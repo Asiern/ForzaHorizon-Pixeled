@@ -102,7 +102,7 @@ int main() {
 
 	void Config() {
 		delay(800); //delay para no detectar dos toques en la pantalla tactil
-		MostrarJuego();
+		MostrarDificultad();
 		PANT_DAT.px = 0; //Inicializar x e y
 		PANT_DAT.py = 0;
 
@@ -152,7 +152,7 @@ int main() {
 			break;
 
 		case JUEGO:
-			
+			MostrarJuego();
 			break;
 
 		case PAUSA:
