@@ -27,7 +27,6 @@ int estado;
 int main() {
 
 	// Variables del main
-	//touchPosition pos_pantalla;
 	int jugadores;
 	int dificultad;
 
