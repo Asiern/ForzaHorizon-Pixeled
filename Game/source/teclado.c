@@ -49,19 +49,19 @@ void IntTec() {
         int stop = 0;
         if (TeclaPulsada() == START) //MENU
         {	
-                Ezabatusonic(1,0,0);
-                Ezabatusonic(2,0,0);
-                Ezabatusonic(3,0,0);
-                Ezabatusonic(4,0,0);
+                BorrarCar(1,0,0);
+                BorrarCar(2,0,0);
+                BorrarCar(3,0,0);
+                BorrarCar(4,0,0);
                 erakutsipause();
                 while (stop == 0){
                         if(TeclaPulsada() == A){
-                                erakutsijokoa();				
+                                // FONDO erakutsijokoa();				
                                 stop = 1;
                         }	
                         if(TeclaPulsada() == B){
                                 timereset = 0;
-                                jokoa01(0);			
+                                estado = JUEGO;			
                                 stop = 1;
                         }
                 }

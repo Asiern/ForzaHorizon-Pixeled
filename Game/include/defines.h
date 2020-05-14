@@ -55,6 +55,10 @@ defines.h
 // Variables globales
 extern int estado;
 extern int tik;
+extern int jugadores;
+extern int timereset;
+extern int dificultad;
 touchPosition PANT_DAT;
+extern void delay();
 
 //...
