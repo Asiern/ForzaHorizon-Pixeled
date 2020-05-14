@@ -8,6 +8,12 @@
 #include "defines.h"
 #include "sprites.h"
 
+//Esta función tiene que devolver si una tecla ha sido pulsada
+int DetectarTecla() 
+{
+	if ((~TECLAS_DAT & 0x03FF)!=0) return 1;
+	else return 0;
+}
 
 // Esta funcion tiene que devolver el valor de la tecla pulsada
 int  TeclaPulsada() {

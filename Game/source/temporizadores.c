@@ -21,6 +21,7 @@ int x4 = 5;
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
+	iprintf("\x1b[20;2H %d", tik);
     //static int tik=0;
 	/* Void honetan erlojuaren bitartez beste jokalariak kontrolatzen dira*/
 	static int seg = 0;

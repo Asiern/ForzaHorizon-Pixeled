@@ -133,6 +133,55 @@ int main() {
 		}
 	}
 
+	/*void juego1players () { //jokalari batentzako void-a
+		int pushA = 1;
+		/* Pushak (A, B, GORA, BEHERA) tekla sakatuta mantenduz ez mugitzeko erabiltzan dira jokoaren 4 voidetan 
+		(jokoa1players,jokoa2players,jokoa3players,jokoa4players)
+	
+		//J1
+		int j1 = 0; //finished(1) or not(0)
+		int j1x = 5; //x pos of j1
+		static int j1y = 40; //y pos of j1
+
+		MostrarJuego(); //fondoa bistaratu
+
+		//load sprites
+		MostrarCar(1,j1x,j1y);
+		MostrarCar(2,5,68);
+		MostrarCar(3,5,96);
+		MostrarCar(4,5,124);
+
+		delay(2000); // delay bat hasteko
+
+		//tenpZerbErrutEzarri();	
+		timereset = 1; // Resetear reloj
+		while (j1 == 0) {
+			
+			
+			if(TeclaPulsada() == A && DetectarTecla() == pushA){
+                    		if (pushA == 1){
+                        		BorrarCar(1,j1x,40);
+                        		MostrarCar(1,j1x+5,40);
+                        		j1x = j1x+5;
+                       	 		pushA = 0;
+                        		if (j1x >= 220)					
+                        		{
+                            			BorrarCar(1,j1x,40);
+                            			j1 = 1;                            	
+                        		}
+                    		}
+                    		else
+                    		{
+                       			pushA = 1;
+                    		}
+                    		
+			}		
+		}
+		timereset = 0;
+		estado = INICIO;
+	
+	}*/
+
 
 	
 
@@ -152,7 +201,15 @@ int main() {
 			break;
 
 		case JUEGO:
-			MostrarJuego();
+			iprintf("\x1b[20;2H                                ");
+			if (jugadores == 1)
+				juego1players();
+			if (jugadores == 2)
+				juego2players();
+			if (jugadores == 3)
+				juego3players();
+			if (jugadores == 4)
+				juego4players();
 			break;
 
 		case PAUSA:
