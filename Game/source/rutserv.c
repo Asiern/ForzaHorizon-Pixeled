@@ -1,5 +1,4 @@
-﻿// Añadir los includes que sean necesarios
-#include <nds.h>
+﻿#include <nds.h>
 #include <stdio.h>
 #include "teclado.h"
 #include "defines.h"
