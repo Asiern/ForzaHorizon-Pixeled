@@ -32,7 +32,6 @@ void IntTemp() {
 	static int speed3 = 30; //Zailtasun zailaren abiadura
 	
 	if (timereset == 0){ //Timer-a hasieratu
-		iprintf("\x1b[10;2H qwqehniwudhqwwd");
 		BorrarCar(1,0,0);
 		BorrarCar(2,0,0);
 		BorrarCar(3,0,0);
@@ -47,7 +46,6 @@ void IntTemp() {
 	}
 	else{
 		tik++; 
-		iprintf("\x1b[13;2H TIK mas mas %d", tik);
 		if (tik==1)
 		{
 			dec++;
@@ -113,7 +111,7 @@ void IntTemp() {
 				}
 				cont = 0;
 			case 2: //2 Jokalarien kasuan 
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x3 > 240){
 						
 						BorrarCar(3,0,0);
@@ -130,7 +128,7 @@ void IntTemp() {
 						}
 					}
 				}
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x4 > 240){
 						
 						BorrarCar(4,0,0);
@@ -150,7 +148,7 @@ void IntTemp() {
 				
 				cont = 0;
 			case 3: //3 Jokalarien kasuan 
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x4 > 240){
 						
 						BorrarCar(4,0,0);
@@ -170,8 +168,6 @@ void IntTemp() {
 				}
 		
 		}
-		iprintf("\x1b[14;2H DESPUES DEL SWITCH %d", dec);
-		iprintf("\x1b[15;2H JUGADORES %d", jugadores);
 	}
 
 

@@ -58,6 +58,7 @@ extern int tik;
 extern int jugadores;
 extern int timereset;
 extern int dificultad;
+extern int reset;
 touchPosition PANT_DAT;
 extern void delay();
 

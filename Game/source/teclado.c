@@ -8,6 +8,11 @@
 #include "defines.h"
 #include "sprites.h"
 
+int reset;
+int timereset;
+int jugadores;
+int dificultad;
+
 //Esta función tiene que devolver si una tecla ha sido pulsada
 int DetectarTecla() 
 {
@@ -55,6 +60,16 @@ void IntTec() {
         int stop = 0;
         if (TeclaPulsada() == START) //MENU
         {	
+		iprintf("\x1b[2;3H##########################");
+		iprintf("\x1b[3;3H#####      MENU      #####");
+		iprintf("\x1b[4;3H##########################");
+		iprintf("\x1b[6;3H                          ");
+		iprintf("\x1b[20;2H                           ");
+		iprintf("\x1b[8;3H                          ");
+		iprintf("\x1b[10;3H  PULSA A PARA CONTINUAR  ");
+		iprintf("\x1b[12;3H  PULSA B PARA REINICIAR  ");
+		iprintf("\x1b[14;3H                          ");
+		iprintf("\x1b[16;3H                          ");
                 BorrarCar(1,0,0);
                 BorrarCar(2,0,0);
                 BorrarCar(3,0,0);
@@ -62,12 +77,25 @@ void IntTec() {
                 MostrarPausa();
                 while (stop == 0){
                         if(TeclaPulsada() == A){
+				iprintf("\x1b[2;3H##########################");
+				iprintf("\x1b[3;3H#####      GAME      #####");
+				iprintf("\x1b[4;3H##########################");
+				iprintf("\x1b[6;3H#                        #");
+				iprintf("\x1b[20;2H                           ");
+				iprintf("\x1b[8;3H# J1 A      --  J2 B     #");
+				iprintf("\x1b[10;3H# J3 ARRIBA --  J4 ABAJO #");
+				iprintf("\x1b[12;3H#     SELECT PAUSA       #");
+				iprintf("\x1b[14;3H#     START  MENU        #");
+				iprintf("\x1b[16;3H##########################");
                                 MostrarJuego();				
                                 stop = 1;
                         }	
                         if(TeclaPulsada() == B){
                                 timereset = 0;
-                                estado = PAUSA;			
+				reset = 1;
+				jugadores = 0;
+				dificultad = 0;
+                                estado = INICIO;			
                                 stop = 1;
                         }
                 }
@@ -75,8 +103,29 @@ void IntTec() {
 
         if (TeclaPulsada() == SELECT) //PAUSA
         {
+		iprintf("\x1b[2;3H##########################");
+		iprintf("\x1b[3;3H#####      PAUSA     #####");
+		iprintf("\x1b[4;3H##########################");
+		iprintf("\x1b[6;3H                          ");
+		iprintf("\x1b[20;2H                           ");
+		iprintf("\x1b[8;3H                          ");
+		iprintf("\x1b[10;3H  PULSA A PARA CONTINUAR  ");
+		iprintf("\x1b[12;3H                          ");
+		iprintf("\x1b[14;3H                          ");
+		iprintf("\x1b[16;3H                          ");
                 while (stop == 0){
                         if(TeclaPulsada() == A){
+				iprintf("\x1b[2;3H##########################");
+				iprintf("\x1b[3;3H#####      GAME      #####");
+				iprintf("\x1b[4;3H##########################");
+
+				iprintf("\x1b[6;3H#                        #");
+				iprintf("\x1b[20;2H                           ");
+				iprintf("\x1b[8;3H# J1 A      --  J2 B     #");
+				iprintf("\x1b[10;3H# J3 ARRIBA --  J4 ABAJO #");
+				iprintf("\x1b[12;3H#     SELECT PAUSA       #");
+				iprintf("\x1b[14;3H#     START  MENU        #");
+				iprintf("\x1b[16;3H##########################");
                                 stop = 1;
                         }
                 }

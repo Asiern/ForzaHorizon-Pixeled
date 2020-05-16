@@ -23,7 +23,7 @@ void HabilitarInterrupciones() { // En el Controlador de Interrupciones
 void ProgramarRegistrosControl() { 
 
   // Registro de Control del Teclado
-    TECLAS_CNT = 0x4009; //START / A interrupciones
+    TECLAS_CNT = 0x400C; //START / A interrupciones
     TIMER0_CNT = 0x00C3;
   //   El temporizador se activa poniendo un 1 en el 7º bit.
   //   El temporizador interrumpirá al desbordarse el contador, 
