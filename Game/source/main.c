@@ -22,13 +22,14 @@ dovoto y otro de Jaeden Amero
 
 int estado;
 int timereset;
-
+int jugadores;
+int dificultad;
 
 int main() {
 
 	// Variables del main
-	int jugadores;
-	int dificultad;
+	
+	
 
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);

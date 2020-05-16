@@ -22,7 +22,7 @@ int x4 = 5;
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
     //static int tik=0;
-	iprintf("\x1b[20;2H %d", tik);
+	
 	/* Void honetan erlojuaren bitartez beste jokalariak kontrolatzen dira*/
 	static int seg = 0;
 	static int dec = 0;
@@ -47,7 +47,7 @@ void IntTemp() {
 	}
 	else{
 		tik++; 
-		iprintf("\x1b[8;2H oijoijoijoijoij");
+		iprintf("\x1b[13;2H TIK mas mas %d", tik);
 		if (tik==1)
 		{
 			dec++;
@@ -61,7 +61,7 @@ void IntTemp() {
 		}
 		switch (jugadores){
 			case 1:	//Jokalari baten kasuan 
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x2 > 240){
 						
 						BorrarCar(2,0,0);
@@ -73,12 +73,12 @@ void IntTemp() {
 							x2 = x2+speed1;}
 						else if (dificultad == 2){
 							x2 = x2+speed2;}
-						else {
+						else if (dificultad == 3){
 							x2 = x2+speed3;	
 						}
 					}
 				}
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x3 > 240){
 						BorrarCar(3,0,0);
 					}
@@ -89,12 +89,12 @@ void IntTemp() {
 							x3 = x3 + speed1;}
 						else if (dificultad == 2){
 							x3 = x3+speed2;}
-						else {
+						else if (dificultad == 3){
 							x3 = x3+speed3;	
 						}
 					}
 				}
-				if (cont == 1){
+				if (cont == 1 && dificultad != 0){
 					if (x4 > 240){
 						
 						BorrarCar(4,0,0);
@@ -106,7 +106,7 @@ void IntTemp() {
 							x4 = x4+speed1;}
 						else if (dificultad == 2){
 							x4 = x4+speed2;}
-						else {
+						else if (dificultad == 3){
 							x4 = x4+speed3;	
 						}
 					}
@@ -125,7 +125,7 @@ void IntTemp() {
 							x3 = x3 + speed1;}
 						else if (dificultad == 2){
 							x3 = x3+speed2;}
-						else {
+						else if (dificultad == 3){
 							x3 = x3+speed3;	
 						}
 					}
@@ -142,7 +142,7 @@ void IntTemp() {
 							x4 = x4+speed1;}
 						else if (dificultad == 2){
 							x4 = x4+speed2;}
-						else {
+						else if (dificultad == 3){
 							x4 = x4+speed3;	
 						}
 					}
@@ -163,12 +163,15 @@ void IntTemp() {
 							x4 = x4+speed1;}
 						else if (dificultad == 2){
 							x4 = x4+speed2;}
-						else {
+						else if (dificultad == 3){
 							x4 = x4+speed3;	
 						}
 					}
 				}
+		
 		}
+		iprintf("\x1b[14;2H DESPUES DEL SWITCH %d", dec);
+		iprintf("\x1b[15;2H JUGADORES %d", jugadores);
 	}
 
 
