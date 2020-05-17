@@ -28,10 +28,6 @@ int reset;
 
 int main() {
 
-	// Variables del main
-	
-	
-
 	//  Poner en marcha el motor gráfico 2D.
     	powerOn(POWER_ALL_2D);
 
@@ -61,21 +57,21 @@ int main() {
 	estado = INICIO;
 	reset = 0;
 	
+	//Void delay
 	void delay(int x){ //delay = x ms
 			int time = 0;
 
 			while (x > time){
 				x--;				
-				//iprintf("\x1b[2;3H##########################");
 			}
 	}
 	
-	
+	//Este void se ejecuta en el estado inicio del juego
 	void Inicio () {
-		reset = 0;
-		MostrarJugadores();
-		delay(50);
-		touchRead(&PANT_DAT);
+		reset = 0; //Variable utilizada para reiniciar el juego
+		MostrarJugadores(); //Mostrar fondo Jugadores.png
+		delay(50); //
+		touchRead(&PANT_DAT); //Leer pantalla
 
 		//1 jugador
 		if((PANT_DAT.px >= 18 && PANT_DAT.px <= 110) && (PANT_DAT.py >= 108 && PANT_DAT.py <= 129)){
@@ -103,13 +99,13 @@ int main() {
 	
 	}
 
+	//Este void se ejecuta en el estado config del juego
 	void Config() {
 		delay(800); //delay para no detectar dos toques en la pantalla tactil
-		MostrarDificultad();
+		MostrarDificultad(); //Mostrar fondo Dificultad.png
 		PANT_DAT.px = 0; //Inicializar x e y
 		PANT_DAT.py = 0;
 
-		//iprintf("\x1b[23;5HAukeratu zailtasuna"); //Fix Height
 		
 		while (PANT_DAT.px == 0 && PANT_DAT.py == 0){
 			touchRead(&PANT_DAT); //Leer panalla
@@ -136,30 +132,28 @@ int main() {
 		}
 	}
 
-	void juego1players () { //jokalari batentzako void-a
+	//Este vo
+	void juego1players () { //Juego para un jugador
 		int pushA = 1;
-		/* Pushak (A, B, ARRIBA, ABAJO) tekla sakatuta mantenduz ez mugitzeko erabiltzan dira juegoren 4 voidetan 
-		(juego1players,juego2players,juego3players,juego4players)*/
+		/* Las variables push(A, B, ARRIBA, ABAJO) se utilizan para que manteniendo una tecla pulsada no avance el coche*/
 	
 		//J1
 		int j1 = 0; //finished(1) or not(0)
 		int j1x = 5; //x pos of j1
 		static int j1y = 40; //y pos of j1
 
-		MostrarJuego(); //fondoa bistaratu
+		MostrarJuego(); //Mostrar fondo Juego.png
 
-		//load sprites
+		//Cargar sprites 32x32
 		MostrarCar(1,j1x,j1y);
 		MostrarCar(2,5,68);
 		MostrarCar(3,5,96);
 		MostrarCar(4,5,124);
 
-		delay(2000); // delay bat hasteko
-
-		//tenpZerbErrutEzarri();	
+		delay(2000); // Un delay para empezar
+	
 		timereset = 1; // Resetear reloj
-		while (j1 == 0 && reset == 0) {
-			
+		while (j1 == 0 && reset == 0) { //Saladra de este while cuando j1 llegue al final o reset sea = 1			
 			
 			if(TeclaPulsada() == A && DetectarTecla() == pushA){
                     		if (pushA == 1){
@@ -185,7 +179,7 @@ int main() {
 	
 	}
 
-	void juego2players () { // 2 jokalarientzako void-a
+	void juego2players () { //Juego para 2 jugadores
 		int pushA = 1;
 		int pushB = 1;
 		
@@ -199,17 +193,16 @@ int main() {
 		int j2x = 5; //x pos of j2
 		static int j2y = 68; //y pos of j2
 
-		MostrarJuego();
+		MostrarJuego(); //Mostrar fondo Juego.png
 	
-		//load sprites
+		//Cargar sprites 32x32
 		MostrarCar(1,j1x,j1y);
 		MostrarCar(2,j2x,j2y);
 		MostrarCar(3,5,96);
 		MostrarCar(4,5,124);
 
-		//tenpZerbErrutEzarri();
 		timereset = 1;
-		while ((j1 == 0 || j2 == 0)&& reset == 0) {
+		while ((j1 == 0 || j2 == 0)&& reset == 0) {//Saladra de este while cuando j1 y j2 lleguen al final o reset sea = 1	
 			
 			if(TeclaPulsada() == A){
                 		if(DetectarTecla() == pushA){
@@ -220,10 +213,8 @@ int main() {
                        	 			pushA = 0;
                         			if (j1x >= 220)					
                         			{
-                            				//iprintf("\x1b[10;5HPOS: %d",j1x);
                             				BorrarCar(1,j1x,40);
-                            				j1 = 1;
-                            	
+                            				j1 = 1;                            	
                         			}
                     			}
                     			else
@@ -244,8 +235,7 @@ int main() {
 	                        			if (j2x >= 220)					
 	                       				{
 	                           				BorrarCar(2,j2x,j2y);
-	                           				j2 = 1;
-	                            
+	                           				j2 = 1;	                            
 	                        			}
 	                    		}
 	                    		else
@@ -263,7 +253,7 @@ int main() {
 
 
 
-void juego3players () { // 3 jokalarientzako void-a
+void juego3players () { //Juego para 3 jugadores
 		int pushA = 1;
 		int pushB = 1;
 		int pushARRIBA = 1;
@@ -285,16 +275,15 @@ void juego3players () { // 3 jokalarientzako void-a
 
 		MostrarJuego();
 
-		//load sprites
+		//Cargar sprites 32x32
 		MostrarCar(1,j1x,j1y);
 		MostrarCar(2,j2x,j2y);
 		MostrarCar(3,j3x,j3y);
 		MostrarCar(4,5,124);
 
 	
-		//tenpZerbErrutEzarri();
 		timereset = 1;
-		while ((j1 == 0 || j2 == 0 || j3 == 0)&& reset == 0) {
+		while ((j1 == 0 || j2 == 0 || j3 == 0)&& reset == 0) {//Saladra de este while cuando j1, j2 y j3 lleguen al final o reset sea = 1	
 			
 			if(TeclaPulsada() == A){
                 		if(DetectarTecla() == pushA){
@@ -305,10 +294,8 @@ void juego3players () { // 3 jokalarientzako void-a
                        	 			pushA = 0;
                         			if (j1x >= 220)					
                         			{
-                            				//iprintf("\x1b[10;5HPOS: %d",j1x);
                             				BorrarCar(1,j1x,40);
-                            				j1 = 1;
-                            	
+                            				j1 = 1;                            	
                         			}
                     			}
                     			else
@@ -367,7 +354,7 @@ void juego3players () { // 3 jokalarientzako void-a
 		estado = INICIO;
 			
 	}
-void juego4players () { // 4 jokalarientzako void-a
+void juego4players () { //Juego para 4 jugadores
 		int pushA = 1;
 		int pushB = 1;
 		int pushARRIBA = 1;
@@ -396,15 +383,14 @@ void juego4players () { // 4 jokalarientzako void-a
 
 		MostrarJuego();
 
-		//load sprites
+		//Cargar sprites 32x32
 		MostrarCar(1,j1x,j1y);
 		MostrarCar(2,j2x,j2y);
 		MostrarCar(3,j3x,j3y);
 		MostrarCar(4,j4x,j4y);
 		
-		//tenpZerbErrutEzarri();
 		timereset = 1;
-		while ((j1 == 0 || j2 == 0 || j3 == 0 || j4 == 0) && reset == 0 ) {
+		while ((j1 == 0 || j2 == 0 || j3 == 0 || j4 == 0) && reset == 0 ) {//Saladra de este while cuando j1, j2, j3 y j4 lleguen al final o reset sea = 1	
 			
 			if(TeclaPulsada() == A){
                 		if(DetectarTecla() == pushA){
@@ -416,8 +402,7 @@ void juego4players () { // 4 jokalarientzako void-a
                         			if (j1x >= 220)					
                         			{
                             				BorrarCar(1,j1x,40);
-                            				j1 = 1;
-                            	
+                            				j1 = 1;                            	
                         			}
                     			}
                     			else

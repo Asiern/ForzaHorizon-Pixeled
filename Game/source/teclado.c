@@ -57,7 +57,7 @@ int  TeclaPulsada() {
 
 // Rutina de atencion a la interrupcion del teclado
 void IntTec() {
-        int stop = 0;
+        int stop = 0; //Se utiliza para salir de while
         if (TeclaPulsada() == START) //MENU
         {	
 		iprintf("\x1b[2;3H##########################");

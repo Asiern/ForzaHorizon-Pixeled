@@ -21,17 +21,16 @@ int x4 = 5;
 
 // Rutina de atención a la interrupción del temporizador
 void IntTemp() {
-    //static int tik=0;
 	
-	/* Void honetan erlojuaren bitartez beste jokalariak kontrolatzen dira*/
+	/* Esta rutina se utiliza para el control de los jugadores*/
 	static int seg = 0;
 	static int dec = 0;
-	static int cont = 0; // mugitzeko kontagailua
-	static int speed1 = 10; //Zailtasun errazaren abiadura
-	static int speed2 = 20; //Zailtasun normalaren abiadura
-	static int speed3 = 30; //Zailtasun zailaren abiadura
+	static int cont = 0; // Contador de movimiento
+	static int speed1 = 10; //Dificultad Facil
+	static int speed2 = 20; //Dificultad Normal
+	static int speed3 = 30; //Dificultad Dificil
 	
-	if (timereset == 0){ //Timer-a hasieratu
+	if (timereset == 0){ //Reset al timer
 		BorrarCar(1,0,0);
 		BorrarCar(2,0,0);
 		BorrarCar(3,0,0);
@@ -58,7 +57,7 @@ void IntTemp() {
 			tik=0;				
 		}
 		switch (jugadores){
-			case 1:	//Jokalari baten kasuan 
+			case 1:	//Para un jugador
 				if (cont == 1 && dificultad != 0){
 					if (x2 > 240){
 						
@@ -110,7 +109,7 @@ void IntTemp() {
 					}
 				}
 				cont = 0;
-			case 2: //2 Jokalarien kasuan 
+			case 2: //Para 2 jugadores 
 				if (cont == 1 && dificultad != 0){
 					if (x3 > 240){
 						
@@ -147,7 +146,7 @@ void IntTemp() {
 				}
 				
 				cont = 0;
-			case 3: //3 Jokalarien kasuan 
+			case 3: //Para 3 jugadores 
 				if (cont == 1 && dificultad != 0){
 					if (x4 > 240){
 						
